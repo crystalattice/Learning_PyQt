@@ -34,6 +34,10 @@ class MainWindow(QMainWindow):
         """Set default parameters and can be called w/o a value"""
         print(a, b)
 
+    def contextMenuEvent(self, event):
+        print("Context menu event!")
+        super(MainWindow, self).contextMenuEvent(event)
+
 
 app = QApplication(sys.argv)  # Runs event loop; set to capture CLI arguments. To ignore CLI args, use QApplication([]).
 
